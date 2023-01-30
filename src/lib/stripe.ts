@@ -1,10 +1,8 @@
 import Stripe from 'stripe';
 
-const apikey: string = process.env.STRIPE_SECRET_KEY || '';
-
-export const stripe = new Stripe(apikey, {
+export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: '2022-11-15',
   appInfo: {
-    name: 'igniteshop',
+    name: 'Ignite Shop',
   },
 });
